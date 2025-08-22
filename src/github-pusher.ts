@@ -1,6 +1,6 @@
 import type GithubPusherPlugin from './main'
 import { i18n } from './i18n'
-import * as fs from 'fs'
+import { fs } from '@typora-community-plugin/core'
 import type { GithubPusherSettings } from './settings'
 
 export interface PushResult {
@@ -111,11 +111,8 @@ export class GithubPusher {
 
     async getBase64(filePath: string): Promise<string> {
         try {
-            // 读取文件内容
-            const fileBuffer = await fs.promises.readFile(filePath)
-
-            // 将文件内容转换为base64字符串
-            const base64String = fileBuffer.toString('base64')
+            const content = await fs.readText(filePath)
+            const base64String = btoa(unescape(encodeURIComponent(content)))
 
             return base64String
         } catch (error) {
