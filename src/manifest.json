@@ -1,5 +1,5 @@
 {
-  "id": "veik.githubpusher",
+  "id": "typora-community-plugin.githubpusher",
   "name": "Github Pusher",
   "description": "Push your Markdown files from Typora directly to a GitHub repository.",
   "author": "Veik",
