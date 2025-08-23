@@ -20,6 +20,7 @@ export const i18n = new I18n({
             pushFailed: 'Push failed',
             configIncomplete: 'Configuration incomplete',
             missingFields: 'Missing fields',
+            pushProcess: 'Pushing...'
         },
         'zh-cn': {
             pushToGithub: '推送到 GitHub',
@@ -39,6 +40,7 @@ export const i18n = new I18n({
             pushFailed: '推送失败',
             configIncomplete: '配置不完整',
             missingFields: '缺失的配置项',
+            pushProcess: '推送中...'
         }
     }
 })

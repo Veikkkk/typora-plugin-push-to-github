@@ -44,13 +44,16 @@ export default class GithubPusherPlugin extends Plugin<GithubPusherSettings> {
                     return
                   }
 
+                  const process = new Notice(i18n.t.pushProcess, 0)
                   const result = await githubPusher.pushToGithub(path)
 
                   if (result.success) {
                     new Notice(result.message, 2000)
+                    process.close()
                     console.log(result.message)
                   } else {
                     new Notice(result.message, 2000)
+                    process.close()
                     console.error(result.message, result.error)
                   }
                 })

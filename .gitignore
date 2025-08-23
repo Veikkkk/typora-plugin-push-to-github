@@ -8,3 +8,6 @@ yalc.lock
 # output
 dist/
 plugin.zip
+
+# config
+test/vault/.typora/data
